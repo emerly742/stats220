@@ -22,4 +22,6 @@ Companies I would love to work for include:
 3. Building on my very limited programming and statistical experience to become more confident in this area.
 
 
-A meme that captures how I currently feel about my university studies is ![Yoshi](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzJmZmo3bGx3c3pseDhybXJxMWllYmdpdjh3cGNmaWgzcWhuZnFmayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RCwOTgJidoMda/giphy.gif)
+A meme that captures how I currently feel about my university studies is 
+
+![Yoshi](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzJmZmo3bGx3c3pseDhybXJxMWllYmdpdjh3cGNmaWgzcWhuZnFmayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RCwOTgJidoMda/giphy.gif)
