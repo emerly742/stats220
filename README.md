@@ -7,6 +7,7 @@ This is my repo for STATS 220.
 - I am undertaking two degrees in Marketing, Commercial Law and Global Politics and Human Rights
 - I am taking STATS 220 because I want to diversify my capabilities beyond the social sciences and marketing.
 - I want to do market research after university so I'm taking more stats courses so I can work for companies like:
+
   - [Saatchi & Saatchi](https://www.saatchi.co.nz/)
   - [TRA](https://www.theresearchagency.com/)
   - [DDB](https://www.ddbgroup.co.nz/ddb)
