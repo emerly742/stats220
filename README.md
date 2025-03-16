@@ -8,7 +8,7 @@ This is my repo for STATS 220.
   1. Bachelor of Commerce majoring in Marketing and Commercial Law
   2. Bachelor of Global Studies majoring in French Global Politics and Humans Rights
 - I am taking STATS 220 outside of my regular programmes because I want to diversify my capabilities beyond the social sciences and marketing. I'm a bit nervous because I've only done STATS 108 and that was 3 years ago. But I'm ready to learn!
-- I want to do market research after university so I'm taking more stats courses so I can work for companies like:
+- I want to do market research after university. I'm taking more stats courses so I can work for companies like:
 
   - [Saatchi & Saatchi](https://www.saatchi.co.nz/)
   - [TRA](https://www.theresearchagency.com/)
