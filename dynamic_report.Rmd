@@ -1,0 +1,124 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+library(tidyverse)
+```
+
+```{css}
+body {
+  color:#324f4c;background-color:#7cc7c0;font-family:Georgia;font-size:12pt;
+}
+```
+
+## What on earth are you watching? Good question. Here's some data about YouTube video watching habits.
+
+The following data, presented as tables and summary values, represent video watching habits over several days. It examines and correlates multiple variables including video completion, enjoyment, duration and views.
+
+```{r}
+
+# uploading and naming the .csv file
+csv_file <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vQmWSFZzxWK9716TRkVamqK7R2QJpfCubdrzMSN9jct9DqWEbt8lnf0HrRbwvWqnvtsluWV5GW4VZb-/pub?gid=653426766&single=true&output=csv"
+
+# importing the data
+logged_data <- read_csv(csv_file)
+
+latest_data <- logged_data %>%
+  rename(time_recorded = 1,
+         yt_link = 2,
+         video_name = 3,
+         channel_name = 4,
+         duration_s = 5,
+         views = 6,
+         simul_activity = 7,
+         finished_video = 8,
+         rating = 9)
+
+```
+
+### Here's a cool graph comparing video enjoyment to their completion.
+
+```{r fig.width = 14, fig.height = 6}
+# creating the first plot
+ggplot(data = latest_data) +
+  geom_bar(aes(y = rating, fill = finished_video)) +
+  labs(title = "Finished videos are better videos?",
+       subtitle = "Comparing a video's rating to whether it was finished",
+       caption = "Source: Emily Clelland's Google Form",
+       x = "Number of videos",
+       y = "Video rating")
+
+```
+
+How interesting.
+
+### Here's another graph that analyses which activities are most often conducted while watching a YouTube video.
+
+```{r fig.width = 14, fig.height = 6}
+# naming and making informative the second plot that will be used
+ggplot(data = latest_data) +
+  geom_bar(aes(x = simul_activity),
+           fill = "#ac84de") +
+  labs(title = "Simultaneous activities while watching YouTube vidoes",
+       subtitle = "Analysing which activities most frequently coincide with watching a YouTube video",
+       caption = "Source: Emily Clelland's Google Form",
+       x = "Activity",
+       y = "Number of videos")
+
+```
+
+Woah, I never would have thought that was the most common activity.
+
+### And what about this graph that shows the range of video durations in seconds. AND it's pink!
+
+Wow, that's a big range of video lengths. There's 3600 seconds in an hour, to put it in perspective.
+
+```{r fig.width = 14, fig.height = 6}
+# naming and making informative the third plot that will be used
+ggplot(data = latest_data) +
+  geom_bar(aes(x = duration_s),
+           fill = "#e086d2") +
+  labs(title = "YouTube Video Duration",
+       subtitle = "Examining the length of YouTube videos",
+       caption = "Source: Emily Clelland's Google Form",
+       x = "Duration (in seconds)",
+       y = "Number of videos")
+
+```
+
+What cool graphs, right? Now let's look at some cool summary values.
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm92bWl1aHcxdWg4a29uOGRtejJrYnJlb2FpZ2cwYTBwMHZqYWh3NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Hb6RoJcYEqkKlPoCj2/giphy.gif)
+
+```{r}
+# naming the first summary value
+views_vector <- latest_data$views
+average_views <- mean(views_vector) %>%
+  round(0)
+
+# naming the second summary value
+duration_vector <- latest_data$duration_s
+longest_duration <- max(duration_vector)
+
+# naming the third summary value
+title_vector <- latest_data$video_name
+shortest_title <- min(nchar(title_vector))
+
+#disable scientific notation
+options(scipen = 999)
+```
+
+### Time for some interesting numbers
+
+The average number of views across the videos is `r average_views`.
+
+The longest video is `r longest_duration` seconds in duration.
+
+The shortest title is `r shortest_title` characters in length.
+
+### What cool numbers!
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTRpazl1YW5uZ3IxNHFuNDlxZjlwOGJvNHUxeGxwcTQ0MDRidmhlbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wBSsIKHZB1jb6log86/giphy.gif)
